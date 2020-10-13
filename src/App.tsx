@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { FilterProvider } from './FilterContext'
 
-function App() {
+import './App.scss'
+
+import CountChoice from './components/CountChoice'
+import RarityChoice from './components/RarityChoice'
+import RegionChoice from './components/RegionChoice'
+import GenerateButton from './components/GenerateButton'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <FilterProvider>
+      <img
+        src={'/images/logo.svg'}
+        alt="logo"
+        width="420px"
+        style={{ marginBottom: '20px' }}
+      />
+      {/* <h2>ROULETTE</h2> */}
+      <RegionChoice />
+      <RarityChoice />
+      <CountChoice />
+      <GenerateButton />
+    </FilterProvider>
+  )
 }
 
-export default App;
+export default App

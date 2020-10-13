@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,-1003.47,-341.64)">
+        <g transform="matrix(1,0,0,1,-1.04083e-17,-7.96602)">
+            <g id="Champion_rarity_selected" transform="matrix(1.81108,0,0,1.81108,1025.2,371.339)">
+                <g transform="matrix(1,0,0,1,-12,-12)">
+                    <g transform="matrix(1,0,0,1,4.1,2)">
+                        <path d="M0.343,4.971L7.771,0L15.2,4.971L15.2,14.971L7.771,20L0.343,14.971L0.343,4.971Z" style="fill:url(#_Radial1);fill-rule:nonzero;"/>
+                        <path d="M2.857,6.686L7.771,3.314L12.686,6.686L12.686,13.314L7.771,16.629L2.857,13.314L2.857,6.686Z" style="fill:url(#_Linear2);fill-rule:nonzero;stroke:rgb(114,87,46);stroke-width:1px;"/>
+                        <g transform="matrix(1,0,0,1,0,14.286)">
+                            <path d="M7.771,5.714L0.343,0.686L0.343,0.171L7.771,5.2L15.2,0.171L15.2,0.686L7.771,5.714Z" style="fill:rgb(159,141,130);fill-rule:nonzero;"/>
+                        </g>
+                        <path d="M15.2,5.486L7.771,0.514L0.343,5.486L0.343,4.971L7.771,0L15.2,4.971L15.2,5.486Z" style="fill:rgb(247,235,222);fill-opacity:0.5;fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <radialGradient id="_Radial1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(11.8566,0,0,8.80781,7.78469,9.9807)"><stop offset="0" style="stop-color:rgb(251,236,227);stop-opacity:1"/><stop offset="0.52" style="stop-color:rgb(225,206,193);stop-opacity:1"/><stop offset="0.99" style="stop-color:rgb(199,176,160);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(199,176,160);stop-opacity:1"/></radialGradient>
+        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(8.14005e-16,13.2937,-13.2937,8.14005e-16,7.78469,3.34251)"><stop offset="0" style="stop-color:rgb(237,170,43);stop-opacity:1"/><stop offset="0.04" style="stop-color:rgb(237,169,41);stop-opacity:1"/><stop offset="0.65" style="stop-color:rgb(233,150,13);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(231,143,2);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>
