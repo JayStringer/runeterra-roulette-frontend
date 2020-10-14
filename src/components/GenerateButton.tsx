@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import styled from 'styled-components'
+import ky from 'ky'
 import { useFilter } from '../FilterContext'
 
 const StyledImg = styled.img`
@@ -15,12 +16,26 @@ const GenerateButton = () => {
 
   const { filter } = useFilter()
 
+  const requestCards = async () => {
+    const response = await ky
+      .get('https://runeterra-roulette.requestcatcher.com/test', {
+        searchParams: {
+          ...filter.rarities,
+          ...filter.regions,
+          count: filter.count,
+        },
+      })
+      .json()
+    console.log(response)
+  }
+
   return (
     <Fragment>
       <StyledImg
         src={source}
         alt=""
         width={width}
+        // onClick={() => requestCards()}
         onMouseOver={() => setSource(hoverImg)}
         onMouseOut={() => {
           setSource(normalImg)
