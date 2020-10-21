@@ -18,7 +18,7 @@ const GenerateButton = () => {
 
   const requestCards = async () => {
     const response = await ky
-      .get('https://runeterra-roulette.requestcatcher.com/test', {
+      .get('http://localhost:8080/cards', {
         searchParams: {
           ...filter.rarities,
           ...filter.regions,
@@ -35,7 +35,7 @@ const GenerateButton = () => {
         src={source}
         alt=""
         width={width}
-        // onClick={() => requestCards()}
+        onClick={() => requestCards()}
         onMouseOver={() => setSource(hoverImg)}
         onMouseOut={() => {
           setSource(normalImg)
