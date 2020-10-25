@@ -7,6 +7,7 @@ import CountChoice from './components/CountChoice'
 import RarityChoice from './components/RarityChoice'
 import RegionChoice from './components/RegionChoice'
 import GenerateButton from './components/GenerateButton'
+import Card from './components/Card'
 
 const App = () => {
   return (
@@ -22,6 +23,10 @@ const App = () => {
       <RarityChoice />
       <CountChoice />
       <GenerateButton />
+      <ul>
+        <Card image_url="http://dd.b.pvp.net/1_12_0/set1/en_us/img/cards/01NX047.png" />
+        <Card image_url="http://dd.b.pvp.net/1_12_0/set1/en_us/img/cards/01NX047.png" />
+      </ul>
     </FilterProvider>
   )
 }

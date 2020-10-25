@@ -44,9 +44,9 @@ const GenerateButton = () => {
         onMouseDown={() => setWidth('140px')}
         onMouseUp={() => setWidth('150px')}
       />
-      <div style={{ textAlign: 'left', marginLeft: '45%', color: 'white' }}>
+      {/* <div style={{ textAlign: 'left', marginLeft: '45%', color: 'white' }}>
         <pre>{JSON.stringify(filter, null, 2)}</pre>
-      </div>
+      </div> */}
     </Fragment>
   )
 }
