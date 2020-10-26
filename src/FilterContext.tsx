@@ -44,7 +44,7 @@ const filterDefaults = {
       champion: true,
     },
   },
-  updateFilter: (filters: Filter) => {},
+  setCount: (count: number) => {},
   toggleRarity: (rarity: keyof Rarities) => {},
   toggleRegion: (region: keyof Regions) => {},
 }
@@ -60,27 +60,31 @@ interface IProviderProps {
 export const FilterProvider = (props: IProviderProps) => {
   const [filter, setFilter] = useState(filterDefaults.filter)
 
-  const updateFilter = (update: {}): void => {
+  const _updateFilter = (update: {}): void => {
     setFilter({ ...filter, ...update })
+  }
+
+  const setCount = (count: number) => {
+    _updateFilter({ count: count })
   }
 
   const toggleRarity = (rarity: keyof Rarities) => {
     const update = {
       rarities: { ...filter.rarities, [rarity]: !filter.rarities[rarity] },
     }
-    updateFilter(update)
+    _updateFilter(update)
   }
 
   const toggleRegion = (region: keyof Regions) => {
     const update = {
       regions: { ...filter.regions, [region]: !filter.regions[region] },
     }
-    updateFilter(update)
+    _updateFilter(update)
   }
 
   return (
     <FilterContext.Provider
-      value={{ filter, updateFilter, toggleRarity, toggleRegion }}
+      value={{ filter, setCount, toggleRarity, toggleRegion }}
     >
       {props.children}
     </FilterContext.Provider>

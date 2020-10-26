@@ -10,7 +10,7 @@ const getButtonPath = (i: number, selected: boolean): string => {
 }
 
 const CountChoice = () => {
-  const { filter, updateFilter } = useFilter()
+  const { filter, setCount } = useFilter()
 
   return (
     <FilterContainer>
@@ -19,7 +19,7 @@ const CountChoice = () => {
         return (
           <FilterItem
             key={i}
-            onClick={() => updateFilter({ count: i })}
+            onClick={() => setCount(i)}
             src={getButtonPath(i, filter.count === i)}
             width="33px"
             padding="5.5px"
