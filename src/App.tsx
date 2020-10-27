@@ -20,7 +20,6 @@ const App = () => {
           width="420px"
           style={{ marginBottom: '20px' }}
         />
-        {/* <h2>ROULETTE</h2> */}
         <RegionChoice />
         <RarityChoice />
         <CountChoice />

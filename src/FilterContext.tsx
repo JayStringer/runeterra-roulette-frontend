@@ -1,5 +1,24 @@
 import React, { createContext, useContext, useState } from 'react'
 
+export type Languages = {
+  german: 'de_de'
+  english: 'en_us'
+  spanishSpain: 'es_es'
+  spanishMexico: 'es_mx'
+  french: 'fr_fr'
+  italian: 'it_it'
+  japan: 'ja_jp'
+  korean: 'ko_kr'
+  polish: 'pl_pl'
+  portuguese: 'pt_br'
+  thai: 'th_th'
+  turkish: 'tr_tr'
+  russian: 'ru_ru'
+  chinese: 'zh_tw'
+}
+
+type Language = Languages[keyof Languages]
+
 export type Regions = {
   bilgewater?: boolean
   demacia?: boolean
@@ -26,6 +45,7 @@ export type Filter = {
 
 const filterDefaults = {
   filter: {
+    language: 'en_us',
     count: 1,
     regions: {
       bilgewater: true,
@@ -44,6 +64,7 @@ const filterDefaults = {
       champion: true,
     },
   },
+  setLanguage: (language: Language) => {},
   setCount: (count: number) => {},
   toggleRarity: (rarity: keyof Rarities) => {},
   toggleRegion: (region: keyof Regions) => {},
@@ -62,6 +83,10 @@ export const FilterProvider = (props: IProviderProps) => {
 
   const _updateFilter = (update: {}): void => {
     setFilter({ ...filter, ...update })
+  }
+
+  const setLanguage = (language: Language) => {
+    _updateFilter({ language: language })
   }
 
   const setCount = (count: number) => {
@@ -84,7 +109,7 @@ export const FilterProvider = (props: IProviderProps) => {
 
   return (
     <FilterContext.Provider
-      value={{ filter, setCount, toggleRarity, toggleRegion }}
+      value={{ filter, setLanguage, setCount, toggleRarity, toggleRegion }}
     >
       {props.children}
     </FilterContext.Provider>
