@@ -17,8 +17,7 @@ const App = () => {
         <img
           src={'/images/logo.svg'}
           alt="logo"
-          width="420px"
-          style={{ marginBottom: '20px' }}
+          style={{ marginBottom: '20px', minWidth: '320px', maxWidth: '420px' }}
         />
         <RegionChoice />
         <RarityChoice />

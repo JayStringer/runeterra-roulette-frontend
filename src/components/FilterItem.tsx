@@ -11,7 +11,11 @@ const FilterItem = (props: FilterItemProps) => {
   return (
     <li
       onClick={() => props.onClick()}
-      style={{ padding: props.padding, display: 'inline-block' }}
+      style={{
+        padding: props.padding,
+        display: 'inline-block',
+        cursor: 'pointer',
+      }}
     >
       <img src={props.src} alt="" width={props.width || '100px'} />
     </li>
